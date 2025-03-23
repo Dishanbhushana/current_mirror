@@ -14,7 +14,7 @@ Active Loads: Current mirrors are used in differential amplifier stages to provi
 ## AIM design and analyse the current mirror circuit a a active load in the amplifier circuit<br>
 given:VDD=1.8V,P<=1mW,Av=10V/V.<br>
 ## circuit diagram from LT spice
-
+![Screenshot (50)](https://github.com/user-attachments/assets/a9c65dd1-b5db-4243-b7e5-95e6900e83ea)
 ## for mirror ratio of1:1<br>
 WKT It=Iref+Ix
 Therefore, for 1:1 ratio Iref=Ix
@@ -26,6 +26,7 @@ Therefore,Iref=0.2778mA.
 
 To obtain the current value according to the given ratio, the provided values of W/L for M1 is 3um/180nm , M2 is 3um/180nm, and M3 is 3um/180nm.
 Vin to be in saturation region so considering Vin is 0.838V.
+![Screenshot (49)](https://github.com/user-attachments/assets/becad374-ecd4-4490-a57a-cb4e465c8fc3)
 ### Analyzing the current mirroring circuit by changing the w and L but maintaing the same ratio.
 
 **(a)L=180nm.**
@@ -60,13 +61,15 @@ Set Stop Time: 10ms.
 Run the simulation.
 Our dc_offset = 0.838V and assume amplitude as 50mV and frequency as 1Khz.
 The theriotical gain is-10V/V.But the obtained gain from the circuit is -10.2V/V.
-## transient analysis<br>
+![Screenshot (49)](https://github.com/user-attachments/assets/58ed09c2-e9a3-45db-ac96-7562aca26522)
+## AC analysis<br>
 Steps to get Ac analysis Waveform:
 In simulation tab select AC Analysis.
 In the AC Analysis tab, select Type of Sweep as Decade.
 Enter the number of points per decade (ex:20) and the frequency range ( 0.1Hz to 1THz).
 gain from the AC analysis(frequency response) is 22.36dB <br>
 The obatined 3db B.W=2.267GHz.<br>
+![Screenshot (49)](https://github.com/user-attachments/assets/585695f5-1821-4c40-a779-cf9f51206f38)
 ### circuit_2
 It=Iref+Ix
 Therefore, for 1:2 ratio 2*Iref=Ix
@@ -77,7 +80,9 @@ It=0.555mA.
 Therefore,Iref=0.185mA<br>
 according to the given ratio, the provided values of W/L for M1 is 6um/180nm , M2 is 6um/180nm, and M3 is 3um/180nm,Vin is 0.763V.<br>
 ### circuit diagram
+![Screenshot (48)](https://github.com/user-attachments/assets/9eb53086-1544-4826-81fb-3bb68db6fb20)
 ### DC analysis:
+![Screenshot (51)](https://github.com/user-attachments/assets/26a2b4e3-f99e-4de7-8c6a-88877ddf47ce)
 ### Transient Analysis:<br>
 Steps for transient Analysis:
 Replace DC input with an AC signal.
@@ -85,12 +90,14 @@ Use SINE(dc_offset, Amplitude, Frequency).
 Go to "Simulate" > "Edit Simulation Cmd" > "Transient".
 Set Stop Time: 10ms.
 Run the simulation.
+![Screenshot (51)](https://github.com/user-attachments/assets/0c1e3cf5-51ed-4048-8347-1fb4009268d6)
 Our dc_offset = 0.763V and assume amplitude as 50mV and frequency as 1Khz.<br>
 gain is -10V. obtained gain from thecircuit is -11.68V/V.<br>
 ### Ac analysis 
 In simulation tab select AC Analysis.<br>
 In the AC Analysis tab, select Type of Sweep as Decade.<br>
 Enter the number of points per decade (ex:20) and the frequency range ( 0.1Hz to 1THz).<br>
+![Screenshot (51)](https://github.com/user-attachments/assets/bcc72416-90cd-4d76-8e83-8ed839ec919e)
 Expected gain in db of the circuit is 21.34db.But the obtained gain from the AC analysis(frequency response) is 24.6dB.<br>
 ### **Table:**
 | **Parameter**  | **Mirror Ratio 1:1** (Theory) | **Mirror Ratio 1:1** (Practical) | **Mirror Ratio 1:2** (Theory) | **Mirror Ratio 1:2** (Practical) |
